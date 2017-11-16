@@ -67,9 +67,9 @@ module Chewy
       end
     end
 
-    initializer 'chewy.request_strategy' do |app|
-      app.config.middleware.insert_after(Rails::Rack::Logger, RequestStrategy)
-    end
+#     initializer 'chewy.request_strategy' do |app|
+#       app.config.middleware.insert_after(Rails::Rack::Logger, RequestStrategy)
+#     end
 
     initializer 'chewy.add_indices_path' do |_app|
       Chewy::Railtie.all_engines.each do |engine|
